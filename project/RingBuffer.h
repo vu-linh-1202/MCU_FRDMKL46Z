@@ -17,20 +17,16 @@ typedef enum
     FALSE
 }BOOL;
 
-extern uint8_t queue_push_index;
-extern uint8_t queue_pop_index;
-extern uint8_t srec_lines_recorded;
 extern volatile BOOL queue_overflow_flag;
 extern volatile BOOL driver_update_flag;
+extern uint8_t srec_lines_pushed;
 extern uint32_t add_restart;
 extern uint32_t msp_restart;
-extern uint8_t srec_lines_pushed;
 
 
-
-__ramfunc void push_srec_line(uint8_t data);
+__ramfunc void Push_Circular_Queue(uint8_t data);
 void handle_queue_overflow();
-void process_srec_line();
-__ramfunc uint8_t next_index(uint8_t ui8_index);
+void Pop_Circular_Queue();
+__ramfunc uint8_t Next_Index_Queue(uint8_t ui8_index);
 
 #endif /* _RING_BUFFER_H_ */

@@ -21,7 +21,7 @@ void delay(unsigned long delayTime);
 void HardFault_Handler();
 
 uint32_t Vector_Table_To_RAM[VECTOR_TABLE_SIZE] __attribute__(( aligned (VECTOR_TABLE_ALIGNMENT) ));
-
+uint8_t srec_lines_recorded = 0;
 
 void SetMSP(uint32_t value)
 {
@@ -31,7 +31,6 @@ void SetPC(uint32_t value)
 {
     __asm("BLX R0");
 }
-
 
 void main()
 {
@@ -52,7 +51,7 @@ void main()
         }
         if(srec_lines_recorded != srec_lines_pushed)
         {
-            process_srec_line();
+            Pop_Circular_Queue();
             srec_lines_recorded++;
         }
         else
@@ -71,23 +70,18 @@ void main()
 
 __ramfunc void UART0_IRQHandler()
 {
-   push_srec_line(UART0->D);
+   Push_Circular_Queue(UART0->D);
 }
-
 
 void Move_Vector_Table()
 {
-    uint8_t  ui8_i;
-    uint32_t* p; 
-    p=0;
-    for (ui8_i = 0; ui8_i < VECTOR_TABLE_SIZE; ui8_i++)
-    {
-      Vector_Table_To_RAM[ui8_i]=*p;
-      p++;
-    }
-    __asm("CPSID   I");
-    SCB->VTOR= (uint32_t)Vector_Table_To_RAM;
-    __asm("CPSIE   I");
+    uint32_t* pSrc = (uint32_t*)0;
+    uint32_t* pDest = Vector_Table_To_RAM;
+    memcpy(pDest, pSrc, VECTOR_TABLE_SIZE * sizeof(uint32_t));
+
+    __disable_irq();
+    SCB->VTOR = (uint32_t)Vector_Table_To_RAM;
+    __enable_irq();
 }
 
 void HardFault_Handler()
