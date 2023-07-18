@@ -55,5 +55,30 @@ uint32_t hex_to_int(char *hex_string, uint32_t length)
 }
 
 
+uint16_t Calculate_Check_Sum(uint8_t * srec_line)
+{
+    uint16_t crc = 0xFFFF;
+    uint8_t len = *srec_line;
+    uint8_t i;
+    uint8_t j;
+    for(i = 0; i < len; i++)
+    {
+        crc ^= srec_line[i];
+        for(j = 0; j < 8; j++)
+        {
+            if(crc & 0x0001)
+            {
+                crc = (crc >> 1) ^ 0xA001;
+            }
+            else
+            {
+                crc = (crc >> 1);
+            }
+        }
+    }
+    return crc;
+}
+
+
 
 

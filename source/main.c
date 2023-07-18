@@ -47,7 +47,7 @@ void main()
     {
         if(queue_overflow_flag == TRUE)
         {
-            handle_queue_overflow();
+            Handle_Queue_Overflow();
         }
         if(srec_lines_recorded != srec_lines_pushed)
         {
