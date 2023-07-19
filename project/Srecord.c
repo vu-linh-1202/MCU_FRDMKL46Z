@@ -4,34 +4,26 @@
 #include <stdbool.h>
 #include "Srecord.h"
 
-__ramfunc int Convert2ChartoHex(char a1, char a2)
+__ramfunc uint8_t Convert2ChartoHex(uint8_t c1, uint8_t c2)
 {
-    unsigned char u8_hight_byte = 0;
-    unsigned char u8_low_byte = 0;
-    unsigned char u8_hex = 0;
-    
-    if ((a1 >= '0') && (a1 <= '9'))
-    {
-        u8_hight_byte = a1 - '0';
-    }
-    else if ((a1 >= 'A') && (a1 <= 'F'))
-    {
-        u8_hight_byte = a1 - 'A' + 10;
-    }
-    
-    if ((a2 >= '0') && (a2 <= '9'))
-    {
-        u8_low_byte = a2 - '0';
-    }
-    else if ((a2 >= 'A') && (a2 <= 'F'))
-    {
-        u8_low_byte = a2 - 'A' + 10;
-    }
-    
-    u8_hex = u8_hight_byte * 16 + u8_low_byte;
-    return u8_hex;
-}
+    uint8_t c;
 
+    if ((c1 >= '0') && (c1 <= '9')) {
+        c = c1 - '0';
+    } else {
+        c = c1 - 'A' + 10;
+    }
+
+    c <<= 4;
+
+    if ((c2 >= '0') && (c2 <= '9')) {
+        c |= c2 - '0';
+    } else {
+        c |= c2 - 'A' + 10;
+    }
+
+    return c;
+}
 uint32_t hex_to_int(char *hex_string, uint32_t length)
 {
     uint32_t result = 0;

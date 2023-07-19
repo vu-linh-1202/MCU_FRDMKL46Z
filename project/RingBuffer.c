@@ -12,38 +12,35 @@ uint8_t queue_head = 0;
 uint8_t queue_tail = 0;
 uint32_t add_restart;
 uint32_t msp_restart;
-volatile int16_t count = 1;
 uint8_t srec_lines_pushed = 0;
 /****************************** END DECLARE VARIABLE**************************/
 
 
-/****************************** COEE FOR CIRCULAR QUEUE**************************/
+/****************************** CODE FOR CIRCULAR QUEUE**************************/
 
 __ramfunc void Push_Circular_Queue(uint8_t data)
 {
-  static uint8_t pre_data = 0;
-  
-  srec_queue[queue_head][count] = data;  
-  if ((data != '\n') || (pre_data != '\r'))
+  static uint8_t srec_length = 0;
+   
+  if (data != '\n')
   {
-    count++;
+    srec_queue[queue_head][srec_length + 1] = data;
+    srec_length++;
   }
   else
   {
     if ((queue_head + 1) % QUEUE_SIZE != queue_tail)
     {         
-      srec_queue[queue_head][0] = count - 2; 
+      srec_queue[queue_head][0] = srec_length - 1; 
       srec_lines_pushed++;
+      srec_length = 0;
+      queue_head = (queue_head+1)%QUEUE_SIZE;
     }
     else
     {
       queue_overflow_flag = TRUE;
     }   
-    
-    count = 1;    
-    queue_head = (queue_head + 1) % QUEUE_SIZE;
   }
-  pre_data = data;  
 }
 
 
@@ -51,6 +48,7 @@ void Handle_Queue_Overflow()
 {
   Uart_String_Transmission("Error: Queue overflow detected. Failed to update driver.\r\n");
   queue_overflow_flag = FALSE;
+
 }
 
 
@@ -61,14 +59,11 @@ void Pop_Circular_Queue()
   uint32_t u8_i;
   uint8_t* th_byte_value = 0;
   uint8_t* srec_line = srec_queue[queue_tail];
-  //uint16_t check_sum = Calculate_Check_Sum(srec_line);
   
   flash_address = 0;
-
   for ( u8_i = 4; u8_i < 8; u8_i += 2)
   {
-    flash_address *= 256;
-    flash_address += Convert2ChartoHex(*(srec_line + u8_i + 1), *(srec_line + u8_i + 2));
+    flash_address = (flash_address << 8) | Convert2ChartoHex(*(srec_line + u8_i + 1), *(srec_line + u8_i + 2));
   }
 
   if (flash_address >= 0xa000)
@@ -78,7 +73,7 @@ void Pop_Circular_Queue()
        data_flash[u8_i] = 0; 
     }
 
-    if ((*srec_line == 'S') && (*(srec_line + 1) == '9'))
+    if ((*(srec_line+1) == 'S') && (*(srec_line + 2) == '9'))
     {
       add_restart = flash_address;
       driver_update_flag = TRUE;      

@@ -14,14 +14,13 @@
 
 
 #define VECTOR_TABLE_SIZE         48
-#define VECTOR_TABLE_ALIGNMENT   (0x100U)
+#define VECTOR_TABLE_ALIGNMENT   (0x80U)
 
 void Move_Vector_Table();
 void delay(unsigned long delayTime);
 void HardFault_Handler();
 
 uint32_t Vector_Table_To_RAM[VECTOR_TABLE_SIZE] __attribute__(( aligned (VECTOR_TABLE_ALIGNMENT) ));
-uint8_t srec_lines_recorded = 0;
 
 void SetMSP(uint32_t value)
 {
@@ -38,30 +37,27 @@ void main()
     initLed();
     init_clock();
     uart_init();
-    Uart_String_Transmission("Hi Tera Term\r\n");
+    Uart_String_Transmission("Hi Tera Termhdhdhdhdhd\r\n");
     NVIC_EnableIRQ(UART0_IRQn);
     Flash_Erase(0xa000);
     Flash_Erase(0xa400);
     
     while(1)
     {
-        if(queue_overflow_flag == TRUE)
-        {
-            Handle_Queue_Overflow();
-        }
-        if(srec_lines_recorded != srec_lines_pushed)
+        
+        if(queue_head != queue_tail)
         {
             Pop_Circular_Queue();
-            srec_lines_recorded++;
-        }
-        else
-        {
-            if(driver_update_flag ==  TRUE)
+            if(queue_overflow_flag == TRUE)
             {
-                driver_update_flag =  FALSE;
-                SetPC(add_restart);
-                SetMSP(msp_restart);
+                Handle_Queue_Overflow();
+            }
+            if(driver_update_flag == TRUE)
+            {
                 Uart_String_Transmission("Update Driver");
+                SetPC(add_restart + 4);
+                SetMSP(msp_restart);
+                
             }
         }
     }
@@ -83,6 +79,7 @@ void Move_Vector_Table()
     SCB->VTOR = (uint32_t)Vector_Table_To_RAM;
     __enable_irq();
 }
+
 
 void HardFault_Handler()
 {

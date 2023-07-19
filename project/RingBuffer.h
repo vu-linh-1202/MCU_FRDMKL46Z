@@ -13,7 +13,7 @@
 
 typedef enum
 {
-    TRUE,
+    TRUE =  1,
     FALSE
 }BOOL;
 
@@ -22,6 +22,8 @@ extern volatile BOOL driver_update_flag;
 extern uint8_t srec_lines_pushed;
 extern uint32_t add_restart;
 extern uint32_t msp_restart;
+extern uint8_t queue_head;
+extern uint8_t queue_tail;
 
 
 __ramfunc void Push_Circular_Queue(uint8_t data);
