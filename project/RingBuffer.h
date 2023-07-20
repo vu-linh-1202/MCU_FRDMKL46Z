@@ -19,7 +19,6 @@ typedef enum
 
 extern volatile BOOL queue_overflow_flag;
 extern volatile BOOL driver_update_flag;
-extern uint8_t srec_lines_pushed;
 extern uint32_t add_restart;
 extern uint32_t msp_restart;
 extern uint8_t queue_head;
@@ -27,6 +26,7 @@ extern uint8_t queue_tail;
 
 
 __ramfunc void Push_Circular_Queue(uint8_t data);
+__ramfunc uint8_t next_index(uint8_t ui8_index);
 void Handle_Queue_Overflow();
 void Pop_Circular_Queue();
 

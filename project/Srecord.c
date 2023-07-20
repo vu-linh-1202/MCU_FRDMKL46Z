@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include "Srecord.h"
 
-__ramfunc uint8_t Convert2ChartoHex(uint8_t c1, uint8_t c2)
+ uint8_t Convert2ChartoHex(uint8_t c1, uint8_t c2)
 {
     uint8_t c;
 

@@ -146,7 +146,7 @@ void clear_Str(uint8_t *str1)
 void uart_init()
 {
   uart0_control(ENABLE);
-  uart0_set_baurate(460800,48000000);
+  uart0_set_baurate(1100000,48000000);
   UART0->C2 |= UART_C2_RIE_MASK;/* enable rie interurrupt*/
   UART0_setclk(MCG_PLL_FLLCLK);
   uart0_transmission(ENABLE);

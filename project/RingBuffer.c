@@ -12,11 +12,23 @@ uint8_t queue_head = 0;
 uint8_t queue_tail = 0;
 uint32_t add_restart;
 uint32_t msp_restart;
-uint8_t srec_lines_pushed = 0;
+
 /****************************** END DECLARE VARIABLE**************************/
 
 
 /****************************** CODE FOR CIRCULAR QUEUE**************************/
+__ramfunc uint8_t next_index(uint8_t ui8_index)
+{
+  if (ui8_index == QUEUE_SIZE - 1)
+  {
+    ui8_index = 0;
+  }
+  else
+  {
+    ui8_index++;
+  }
+  return ui8_index;
+}
 
 __ramfunc void Push_Circular_Queue(uint8_t data)
 {
@@ -29,12 +41,12 @@ __ramfunc void Push_Circular_Queue(uint8_t data)
   }
   else
   {
-    if ((queue_head + 1) % QUEUE_SIZE != queue_tail)
+    
+    if (next_index(queue_head) != queue_tail)
     {         
       srec_queue[queue_head][0] = srec_length - 1; 
-      srec_lines_pushed++;
       srec_length = 0;
-      queue_head = (queue_head+1)%QUEUE_SIZE;
+      queue_head = next_index(queue_head);
     }
     else
     {
@@ -48,9 +60,7 @@ void Handle_Queue_Overflow()
 {
   Uart_String_Transmission("Error: Queue overflow detected. Failed to update driver.\r\n");
   queue_overflow_flag = FALSE;
-
 }
-
 
 void Pop_Circular_Queue()
 {
@@ -73,7 +83,7 @@ void Pop_Circular_Queue()
        data_flash[u8_i] = 0; 
     }
 
-    if ((*(srec_line+1) == 'S') && (*(srec_line + 2) == '9'))
+    if ((*(srec_line + 1) == 'S') && (*(srec_line + 2) == '9'))
     {
       add_restart = flash_address;
       driver_update_flag = TRUE;      
@@ -97,8 +107,6 @@ void Pop_Circular_Queue()
       msp_restart = (data_flash[0] | (data_flash[1] << 8) | (data_flash[2] << 16) | (data_flash[3] << 24));
     }
   }
-
-  queue_tail = (queue_tail + 1) % QUEUE_SIZE;
+   queue_tail= next_index(queue_tail);
 }
-
 
