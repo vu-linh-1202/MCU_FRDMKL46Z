@@ -47,10 +47,12 @@ void main()
     
     while(1)
     {
-        
-        if(queue_head != queue_tail)
+        uint32_t add_restart;
+        uint32_t msp_restart;
+
+        if(get_queue_head() != get_queue_tail())
         {
-            Pop_Circular_Queue();
+            Pop_Circular_Queue(&add_restart, &msp_restart);
             pop_line++;
             if(queue_overflow_flag == TRUE)
             {

@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "stdbool.h"
 #include "Srecord.h"
 #include "Flash.h"
 #include "UART.h"
@@ -19,17 +20,14 @@ typedef enum
 
 extern volatile BOOL queue_overflow_flag;
 extern volatile BOOL driver_update_flag;
-extern uint32_t add_restart;
-extern uint32_t msp_restart;
-extern uint8_t queue_head;
-extern uint8_t queue_tail;
-extern uint8_t srec_length;
-extern uint8_t srec_queue[QUEUE_SIZE][MAX_LINE_SREC];
 
-
-__ramfunc void Push_Circular_Queue(uint8_t data);
 __ramfunc uint8_t next_index(uint8_t ui8_index);
+void set_queue_head(uint8_t head);
+void set_queue_tail(uint8_t tail);
+uint8_t get_queue_head();
+uint8_t get_queue_tail();
 void Handle_Queue_Overflow();
-void Pop_Circular_Queue();
+__ramfunc void Push_Circular_Queue(uint8_t data);
+void Pop_Circular_Queue(uint32_t* add_restart, uint32_t* msp_restart);
 
 #endif /* _RING_BUFFER_H_ */
