@@ -9,7 +9,7 @@
 #include "UART.h"
 
 #define MAX_LINE_SREC    50
-#define QUEUE_SIZE       50
+#define QUEUE_SIZE       10
 
 typedef enum
 {
@@ -23,6 +23,8 @@ extern uint32_t add_restart;
 extern uint32_t msp_restart;
 extern uint8_t queue_head;
 extern uint8_t queue_tail;
+extern uint8_t srec_length;
+extern uint8_t srec_queue[QUEUE_SIZE][MAX_LINE_SREC];
 
 
 __ramfunc void Push_Circular_Queue(uint8_t data);

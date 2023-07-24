@@ -97145,90 +97145,6 @@
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSIZET_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_YSIZET_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@277@macro@_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "16",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "18",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__DATA_PTR_MEM_HELPER1__",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
-    "location": {
-      "column": "1",
-      "line": "23",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__data_size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:main.c@290@macro@VECTOR_TABLE_SIZE",
     "What": "MacroDef",
     "defdec": "Def",
@@ -97313,13 +97229,27 @@
     "scope": null
   },
   {
+    "ID": "c:main.c@pop_line",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "pop_line",
+    "location": {
+      "column": "16",
+      "line": "25",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\source\\main.c"
+    },
+    "name": "pop_line",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@SetMSP",
     "What": "Function",
     "defdec": "Def",
     "display": "void SetMSP(uint32_t)",
     "location": {
       "column": "6",
-      "line": "25",
+      "line": "27",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\source\\main.c"
     },
     "name": "SetMSP",
@@ -97333,7 +97263,7 @@
     "display": "void SetPC(uint32_t)",
     "location": {
       "column": "6",
-      "line": "29",
+      "line": "31",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\source\\main.c"
     },
     "name": "SetPC",
@@ -97347,7 +97277,7 @@
     "display": "void main(void)",
     "location": {
       "column": "6",
-      "line": "34",
+      "line": "36",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\source\\main.c"
     },
     "name": "main",
@@ -97361,7 +97291,7 @@
     "display": "void UART0_IRQHandler(void)",
     "location": {
       "column": "16",
-      "line": "67",
+      "line": "71",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\source\\main.c"
     },
     "name": "UART0_IRQHandler",
@@ -97375,7 +97305,7 @@
     "display": "void Move_Vector_Table(void)",
     "location": {
       "column": "6",
-      "line": "72",
+      "line": "76",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\source\\main.c"
     },
     "name": "Move_Vector_Table",
@@ -97383,13 +97313,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1527@F@Move_Vector_Table@pSrc",
+    "ID": "c:main.c@1588@F@Move_Vector_Table@pSrc",
     "What": "Variable",
     "defdec": "Def",
     "display": "pSrc",
     "location": {
       "column": "15",
-      "line": "74",
+      "line": "78",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\source\\main.c"
     },
     "name": "pSrc",
@@ -97397,13 +97327,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1563@F@Move_Vector_Table@pDest",
+    "ID": "c:main.c@1624@F@Move_Vector_Table@pDest",
     "What": "Variable",
     "defdec": "Def",
     "display": "pDest",
     "location": {
       "column": "15",
-      "line": "75",
+      "line": "79",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\source\\main.c"
     },
     "name": "pDest",
@@ -97417,7 +97347,7 @@
     "display": "void HardFault_Handler(void)",
     "location": {
       "column": "6",
-      "line": "84",
+      "line": "88",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\source\\main.c"
     },
     "name": "HardFault_Handler",
@@ -97431,7 +97361,7 @@
     "display": "void delay(unsigned long)",
     "location": {
       "column": "6",
-      "line": "89",
+      "line": "93",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\source\\main.c"
     },
     "name": "delay",
@@ -97439,13 +97369,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1860@F@delay@i",
+    "ID": "c:main.c@1921@F@delay@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "26",
-      "line": "91",
+      "line": "95",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\source\\main.c"
     },
     "name": "i",
@@ -97478,6 +97408,90 @@
     },
     "name": "Flash_Erase",
     "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_YSIZET_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@277@macro@_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "16",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "18",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "23",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
     "scope": null
   },
   {
@@ -98563,13 +98577,55 @@
     "scope": null
   },
   {
+    "ID": "c:@srec_length",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "srec_length",
+    "location": {
+      "column": "16",
+      "line": "26",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.h"
+    },
+    "name": "srec_length",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@srec_length",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "srec_length",
+    "location": {
+      "column": "16",
+      "line": "26",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.h"
+    },
+    "name": "srec_length",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@srec_queue",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "srec_queue",
+    "location": {
+      "column": "16",
+      "line": "27",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.h"
+    },
+    "name": "srec_queue",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@Push_Circular_Queue",
     "What": "Function",
     "defdec": "Dec",
     "display": "void Push_Circular_Queue(uint8_t)",
     "location": {
       "column": "16",
-      "line": "28",
+      "line": "30",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.h"
     },
     "name": "Push_Circular_Queue",
@@ -98583,7 +98639,7 @@
     "display": "void Push_Circular_Queue(uint8_t)",
     "location": {
       "column": "16",
-      "line": "28",
+      "line": "30",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.h"
     },
     "name": "Push_Circular_Queue",
@@ -98597,7 +98653,7 @@
     "display": "uint8_t next_index(uint8_t)",
     "location": {
       "column": "19",
-      "line": "29",
+      "line": "31",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.h"
     },
     "name": "next_index",
@@ -98611,7 +98667,7 @@
     "display": "uint8_t next_index(uint8_t)",
     "location": {
       "column": "19",
-      "line": "29",
+      "line": "31",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.h"
     },
     "name": "next_index",
@@ -98625,7 +98681,7 @@
     "display": "void Handle_Queue_Overflow(void)",
     "location": {
       "column": "6",
-      "line": "30",
+      "line": "32",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.h"
     },
     "name": "Handle_Queue_Overflow",
@@ -98639,7 +98695,7 @@
     "display": "void Handle_Queue_Overflow(void)",
     "location": {
       "column": "6",
-      "line": "30",
+      "line": "32",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.h"
     },
     "name": "Handle_Queue_Overflow",
@@ -98653,7 +98709,7 @@
     "display": "void Pop_Circular_Queue(void)",
     "location": {
       "column": "6",
-      "line": "31",
+      "line": "33",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.h"
     },
     "name": "Pop_Circular_Queue",
@@ -98667,7 +98723,7 @@
     "display": "void Pop_Circular_Queue(void)",
     "location": {
       "column": "6",
-      "line": "31",
+      "line": "33",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.h"
     },
     "name": "Pop_Circular_Queue",
@@ -98675,344 +98731,312 @@
     "scope": null
   },
   {
-    "ID": "c:TPM.h@25@macro@_TPM_H_",
+    "ID": "c:PIT.h@25@macro@_PIT_H_",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_TPM_H_",
+    "display": "_PIT_H_",
     "location": {
       "column": "9",
       "line": "2",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
     },
-    "name": "_TPM_H_",
+    "name": "_PIT_H_",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@EA@TPM_CHANNEL",
+    "ID": "c:@EA@PIT_CHANNEL",
     "What": "Enum",
     "defdec": "Def",
     "display": "",
     "fields": [
       {
-        "ID": "c:@EA@TPM_CHANNEL@CHANNEL_0",
+        "ID": "c:@EA@PIT_CHANNEL@PIT_CHANNEL_0",
         "What": "Enumerator",
         "defdec": "Def",
-        "display": "CHANNEL_0",
+        "display": "PIT_CHANNEL_0",
         "location": {
-          "column": "5",
-          "line": "8",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+          "column": "14",
+          "line": "4",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
         },
-        "name": "CHANNEL_0",
+        "name": "PIT_CHANNEL_0",
         "origin": "user_include",
         "scope": null
       },
       {
-        "ID": "c:@EA@TPM_CHANNEL@CHANNEL_1",
+        "ID": "c:@EA@PIT_CHANNEL@PIT_CHANNEL_1",
         "What": "Enumerator",
         "defdec": "Def",
-        "display": "CHANNEL_1",
+        "display": "PIT_CHANNEL_1",
         "location": {
-          "column": "5",
-          "line": "9",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+          "column": "28",
+          "line": "4",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
         },
-        "name": "CHANNEL_1",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@TPM_CHANNEL@CHANNEL_2",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CHANNEL_2",
-        "location": {
-          "column": "5",
-          "line": "10",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "CHANNEL_2",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@TPM_CHANNEL@CHANNEL_3",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CHANNEL_3",
-        "location": {
-          "column": "5",
-          "line": "11",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "CHANNEL_3",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@TPM_CHANNEL@CHANNEL_4",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CHANNEL_4",
-        "location": {
-          "column": "5",
-          "line": "12",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "CHANNEL_4",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@TPM_CHANNEL@CHANNEL_5",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CHANNEL_5",
-        "location": {
-          "column": "5",
-          "line": "13",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "CHANNEL_5",
+        "name": "PIT_CHANNEL_1",
         "origin": "user_include",
         "scope": null
       }
     ],
     "location": {
       "column": "9",
+      "line": "4",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_PIT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_PIT(void)",
+    "location": {
+      "column": "6",
       "line": "6",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
     },
-    "name": "",
+    "name": "init_PIT",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@EA@CHOOSE_CLOCK_MODE",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@CHOOSE_CLOCK_MODE@DISABLE_TPM",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "DISABLE_TPM",
-        "location": {
-          "column": "5",
-          "line": "18",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "DISABLE_TPM",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CHOOSE_CLOCK_MODE@TPM_COUNTER_INCREMENTS_ON_EVERY_CLOCK",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "TPM_COUNTER_INCREMENTS_ON_EVERY_CLOCK",
-        "location": {
-          "column": "5",
-          "line": "19",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "TPM_COUNTER_INCREMENTS_ON_EVERY_CLOCK",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CHOOSE_CLOCK_MODE@TPM_COUNTER_INCREMENTS_ON_RISING",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "TPM_COUNTER_INCREMENTS_ON_RISING",
-        "location": {
-          "column": "5",
-          "line": "20",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "TPM_COUNTER_INCREMENTS_ON_RISING",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CHOOSE_CLOCK_MODE@RESERVED",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "RESERVED",
-        "location": {
-          "column": "5",
-          "line": "21",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "RESERVED",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "9",
-      "line": "16",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-    },
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@EA@PS_DIVIDE",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@PS_DIVIDE@PS_DIV1",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "PS_DIV1",
-        "location": {
-          "column": "5",
-          "line": "25",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "PS_DIV1",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@PS_DIVIDE@PS_DIV2",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "PS_DIV2",
-        "location": {
-          "column": "5",
-          "line": "26",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "PS_DIV2",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@PS_DIVIDE@PS_DIV4",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "PS_DIV4",
-        "location": {
-          "column": "5",
-          "line": "27",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "PS_DIV4",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@PS_DIVIDE@PS_DIV8",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "PS_DIV8",
-        "location": {
-          "column": "5",
-          "line": "28",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "PS_DIV8",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@PS_DIVIDE@PS_DIV16",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "PS_DIV16",
-        "location": {
-          "column": "5",
-          "line": "29",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "PS_DIV16",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@PS_DIVIDE@PS_DIV32",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "PS_DIV32",
-        "location": {
-          "column": "5",
-          "line": "30",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "PS_DIV32",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@PS_DIVIDE@PS_DIV64",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "PS_DIV64",
-        "location": {
-          "column": "5",
-          "line": "31",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "PS_DIV64",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@PS_DIVIDE@PS_DI128",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "PS_DI128",
-        "location": {
-          "column": "5",
-          "line": "32",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-        },
-        "name": "PS_DI128",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "9",
-      "line": "23",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
-    },
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Set_TPM0_Value",
+    "ID": "c:@F@init_PIT",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void Set_TPM0_Value(TPM_CHANNEL, CHOOSE_CLOCK_MODE, PS_DIVIDE, int32_t, int8_t)",
+    "display": "void init_PIT(void)",
     "location": {
       "column": "6",
-      "line": "35",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+      "line": "6",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
     },
-    "name": "Set_TPM0_Value",
+    "name": "init_PIT",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@Set_TPM0_Value",
+    "ID": "c:@F@load_val_PIT",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void Set_TPM0_Value(TPM_CHANNEL, CHOOSE_CLOCK_MODE, PS_DIVIDE, int32_t, int8_t)",
+    "display": "void load_val_PIT(PIT_CHANNEL, int32_t)",
     "location": {
       "column": "6",
-      "line": "35",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+      "line": "7",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
     },
-    "name": "Set_TPM0_Value",
+    "name": "load_val_PIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@load_val_PIT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void load_val_PIT(PIT_CHANNEL, int32_t)",
+    "location": {
+      "column": "6",
+      "line": "7",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "load_val_PIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@disable_PIT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void disable_PIT(PIT_CHANNEL)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "disable_PIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@disable_PIT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void disable_PIT(PIT_CHANNEL)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "disable_PIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@enable_PIT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void enable_PIT(PIT_CHANNEL)",
+    "location": {
+      "column": "6",
+      "line": "9",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "enable_PIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@enable_PIT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void enable_PIT(PIT_CHANNEL)",
+    "location": {
+      "column": "6",
+      "line": "9",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "enable_PIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@enable_clock_PIT_TIMER",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void enable_clock_PIT_TIMER(void)",
+    "location": {
+      "column": "6",
+      "line": "10",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "enable_clock_PIT_TIMER",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@enable_clock_PIT_TIMER",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void enable_clock_PIT_TIMER(void)",
+    "location": {
+      "column": "6",
+      "line": "10",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "enable_clock_PIT_TIMER",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@disable_clock_PIT_TIMER",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void disable_clock_PIT_TIMER(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "disable_clock_PIT_TIMER",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@disable_clock_PIT_TIMER",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void disable_clock_PIT_TIMER(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "disable_clock_PIT_TIMER",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@enable_clock_gate_PIT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void enable_clock_gate_PIT(void)",
+    "location": {
+      "column": "6",
+      "line": "12",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "enable_clock_gate_PIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@enable_clock_gate_PIT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void enable_clock_gate_PIT(void)",
+    "location": {
+      "column": "6",
+      "line": "12",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "enable_clock_gate_PIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@disable_clock_gate_PIT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void disable_clock_gate_PIT(void)",
+    "location": {
+      "column": "6",
+      "line": "13",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "disable_clock_gate_PIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@disable_clock_gate_PIT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void disable_clock_gate_PIT(void)",
+    "location": {
+      "column": "6",
+      "line": "13",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "disable_clock_gate_PIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@clear_flag_PIT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void clear_flag_PIT(PIT_CHANNEL)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "clear_flag_PIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@clear_flag_PIT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void clear_flag_PIT(PIT_CHANNEL)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
+    },
+    "name": "clear_flag_PIT",
     "origin": "user_include",
     "scope": null
   },
@@ -99213,7 +99237,7 @@
     "scope": null
   },
   {
-    "ID": "c:FLASH.h@27@macro@_FLASH_H_",
+    "ID": "c:Flash.h@27@macro@_FLASH_H_",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "_FLASH_H_",
@@ -99227,7 +99251,7 @@
     "scope": null
   },
   {
-    "ID": "c:Flash.h@27@macro@_FLASH_H_",
+    "ID": "c:FLASH.h@27@macro@_FLASH_H_",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "_FLASH_H_",
@@ -99269,20 +99293,6 @@
     "scope": null
   },
   {
-    "ID": "c:FLASH.h@117@macro@START_COMMAND",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "START_COMMAND",
-    "location": {
-      "column": "9",
-      "line": "6",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\Flash.h"
-    },
-    "name": "START_COMMAND",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:Flash.h@117@macro@START_COMMAND",
     "What": "MacroDef",
     "defdec": "Def",
@@ -99297,7 +99307,21 @@
     "scope": null
   },
   {
-    "ID": "c:FLASH.h@164@macro@CMD_PROGRAM_LONGWORD",
+    "ID": "c:FLASH.h@117@macro@START_COMMAND",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "START_COMMAND",
+    "location": {
+      "column": "9",
+      "line": "6",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\Flash.h"
+    },
+    "name": "START_COMMAND",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Flash.h@164@macro@CMD_PROGRAM_LONGWORD",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "CMD_PROGRAM_LONGWORD",
@@ -99311,7 +99335,7 @@
     "scope": null
   },
   {
-    "ID": "c:Flash.h@164@macro@CMD_PROGRAM_LONGWORD",
+    "ID": "c:FLASH.h@164@macro@CMD_PROGRAM_LONGWORD",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "CMD_PROGRAM_LONGWORD",
@@ -99717,6 +99741,362 @@
     "scope": null
   },
   {
+    "ID": "c:TPM.h@25@macro@_TPM_H_",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_TPM_H_",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+    },
+    "name": "_TPM_H_",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@TPM_CHANNEL",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@TPM_CHANNEL@CHANNEL_0",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CHANNEL_0",
+        "location": {
+          "column": "5",
+          "line": "8",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "CHANNEL_0",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@TPM_CHANNEL@CHANNEL_1",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CHANNEL_1",
+        "location": {
+          "column": "5",
+          "line": "9",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "CHANNEL_1",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@TPM_CHANNEL@CHANNEL_2",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CHANNEL_2",
+        "location": {
+          "column": "5",
+          "line": "10",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "CHANNEL_2",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@TPM_CHANNEL@CHANNEL_3",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CHANNEL_3",
+        "location": {
+          "column": "5",
+          "line": "11",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "CHANNEL_3",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@TPM_CHANNEL@CHANNEL_4",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CHANNEL_4",
+        "location": {
+          "column": "5",
+          "line": "12",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "CHANNEL_4",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@TPM_CHANNEL@CHANNEL_5",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CHANNEL_5",
+        "location": {
+          "column": "5",
+          "line": "13",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "CHANNEL_5",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
+      "line": "6",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@CHOOSE_CLOCK_MODE",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@CHOOSE_CLOCK_MODE@DISABLE_TPM",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "DISABLE_TPM",
+        "location": {
+          "column": "5",
+          "line": "18",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "DISABLE_TPM",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CHOOSE_CLOCK_MODE@TPM_COUNTER_INCREMENTS_ON_EVERY_CLOCK",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "TPM_COUNTER_INCREMENTS_ON_EVERY_CLOCK",
+        "location": {
+          "column": "5",
+          "line": "19",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "TPM_COUNTER_INCREMENTS_ON_EVERY_CLOCK",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CHOOSE_CLOCK_MODE@TPM_COUNTER_INCREMENTS_ON_RISING",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "TPM_COUNTER_INCREMENTS_ON_RISING",
+        "location": {
+          "column": "5",
+          "line": "20",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "TPM_COUNTER_INCREMENTS_ON_RISING",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CHOOSE_CLOCK_MODE@RESERVED",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "RESERVED",
+        "location": {
+          "column": "5",
+          "line": "21",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "RESERVED",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
+      "line": "16",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@PS_DIVIDE",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@PS_DIVIDE@PS_DIV1",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "PS_DIV1",
+        "location": {
+          "column": "5",
+          "line": "25",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "PS_DIV1",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@PS_DIVIDE@PS_DIV2",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "PS_DIV2",
+        "location": {
+          "column": "5",
+          "line": "26",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "PS_DIV2",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@PS_DIVIDE@PS_DIV4",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "PS_DIV4",
+        "location": {
+          "column": "5",
+          "line": "27",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "PS_DIV4",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@PS_DIVIDE@PS_DIV8",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "PS_DIV8",
+        "location": {
+          "column": "5",
+          "line": "28",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "PS_DIV8",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@PS_DIVIDE@PS_DIV16",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "PS_DIV16",
+        "location": {
+          "column": "5",
+          "line": "29",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "PS_DIV16",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@PS_DIVIDE@PS_DIV32",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "PS_DIV32",
+        "location": {
+          "column": "5",
+          "line": "30",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "PS_DIV32",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@PS_DIVIDE@PS_DIV64",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "PS_DIV64",
+        "location": {
+          "column": "5",
+          "line": "31",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "PS_DIV64",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@PS_DIVIDE@PS_DI128",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "PS_DI128",
+        "location": {
+          "column": "5",
+          "line": "32",
+          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+        },
+        "name": "PS_DI128",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
+      "line": "23",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Set_TPM0_Value",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Set_TPM0_Value(TPM_CHANNEL, CHOOSE_CLOCK_MODE, PS_DIVIDE, int32_t, int8_t)",
+    "location": {
+      "column": "6",
+      "line": "35",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+    },
+    "name": "Set_TPM0_Value",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Set_TPM0_Value",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Set_TPM0_Value(TPM_CHANNEL, CHOOSE_CLOCK_MODE, PS_DIVIDE, int32_t, int8_t)",
+    "location": {
+      "column": "6",
+      "line": "35",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\TPM.h"
+    },
+    "name": "Set_TPM0_Value",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@1402@macro@__AEABI_PORTABILITY_INTERNAL_LEVEL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
+    "location": {
+      "column": "11",
+      "line": "42",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ycheck.h"
+    },
+    "name": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:Srecord.h@29@macro@_Srecord_H_",
     "What": "MacroDef",
     "defdec": "Def",
@@ -99815,330 +100195,6 @@
     "scope": null
   },
   {
-    "ID": "c:DLib_Config_Normal.h@105@macro@_DLIB_CONFIG_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_CONFIG_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Config_Normal.h"
-    },
-    "name": "_DLIB_CONFIG_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:PIT.h@25@macro@_PIT_H_",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_PIT_H_",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "_PIT_H_",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@EA@PIT_CHANNEL",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@PIT_CHANNEL@PIT_CHANNEL_0",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "PIT_CHANNEL_0",
-        "location": {
-          "column": "14",
-          "line": "4",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-        },
-        "name": "PIT_CHANNEL_0",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@PIT_CHANNEL@PIT_CHANNEL_1",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "PIT_CHANNEL_1",
-        "location": {
-          "column": "28",
-          "line": "4",
-          "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-        },
-        "name": "PIT_CHANNEL_1",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "9",
-      "line": "4",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void init_PIT(void)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "init_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void init_PIT(void)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "init_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@load_val_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void load_val_PIT(PIT_CHANNEL, int32_t)",
-    "location": {
-      "column": "6",
-      "line": "7",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "load_val_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@load_val_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void load_val_PIT(PIT_CHANNEL, int32_t)",
-    "location": {
-      "column": "6",
-      "line": "7",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "load_val_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@disable_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void disable_PIT(PIT_CHANNEL)",
-    "location": {
-      "column": "6",
-      "line": "8",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "disable_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@disable_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void disable_PIT(PIT_CHANNEL)",
-    "location": {
-      "column": "6",
-      "line": "8",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "disable_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@enable_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void enable_PIT(PIT_CHANNEL)",
-    "location": {
-      "column": "6",
-      "line": "9",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "enable_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@enable_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void enable_PIT(PIT_CHANNEL)",
-    "location": {
-      "column": "6",
-      "line": "9",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "enable_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@enable_clock_PIT_TIMER",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void enable_clock_PIT_TIMER(void)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "enable_clock_PIT_TIMER",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@enable_clock_PIT_TIMER",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void enable_clock_PIT_TIMER(void)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "enable_clock_PIT_TIMER",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@disable_clock_PIT_TIMER",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void disable_clock_PIT_TIMER(void)",
-    "location": {
-      "column": "6",
-      "line": "11",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "disable_clock_PIT_TIMER",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@disable_clock_PIT_TIMER",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void disable_clock_PIT_TIMER(void)",
-    "location": {
-      "column": "6",
-      "line": "11",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "disable_clock_PIT_TIMER",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@enable_clock_gate_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void enable_clock_gate_PIT(void)",
-    "location": {
-      "column": "6",
-      "line": "12",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "enable_clock_gate_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@enable_clock_gate_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void enable_clock_gate_PIT(void)",
-    "location": {
-      "column": "6",
-      "line": "12",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "enable_clock_gate_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@disable_clock_gate_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void disable_clock_gate_PIT(void)",
-    "location": {
-      "column": "6",
-      "line": "13",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "disable_clock_gate_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@disable_clock_gate_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void disable_clock_gate_PIT(void)",
-    "location": {
-      "column": "6",
-      "line": "13",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "disable_clock_gate_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@clear_flag_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void clear_flag_PIT(PIT_CHANNEL)",
-    "location": {
-      "column": "6",
-      "line": "14",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "clear_flag_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@clear_flag_PIT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void clear_flag_PIT(PIT_CHANNEL)",
-    "location": {
-      "column": "6",
-      "line": "14",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\PIT.h"
-    },
-    "name": "clear_flag_PIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:core_cmFunc.h@2260@macro@__CORE_CMFUNC_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -100153,17 +100209,17 @@
     "scope": null
   },
   {
-    "ID": "c:ycheck.h@1402@macro@__AEABI_PORTABILITY_INTERNAL_LEVEL",
+    "ID": "c:String_Handle.h@37@macro@__STRING_HANDLE_H__",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
+    "display": "__STRING_HANDLE_H__",
     "location": {
-      "column": "11",
-      "line": "42",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ycheck.h"
+      "column": "9",
+      "line": "2",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\String_Handle.h"
     },
-    "name": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
-    "origin": "system_include",
+    "name": "__STRING_HANDLE_H__",
+    "origin": "user_include",
     "scope": null
   },
   {
@@ -100181,17 +100237,17 @@
     "scope": null
   },
   {
-    "ID": "c:String_Handle.h@37@macro@__STRING_HANDLE_H__",
+    "ID": "c:DLib_Config_Normal.h@105@macro@_DLIB_CONFIG_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "__STRING_HANDLE_H__",
+    "display": "_DLIB_CONFIG_H",
     "location": {
       "column": "9",
-      "line": "2",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\String_Handle.h"
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Config_Normal.h"
     },
-    "name": "__STRING_HANDLE_H__",
-    "origin": "user_include",
+    "name": "_DLIB_CONFIG_H",
+    "origin": "system_include",
     "scope": null
   },
   {
@@ -100363,30 +100419,16 @@
     "scope": null
   },
   {
-    "ID": "c:@queue_head",
+    "ID": "c:@length_queue",
     "What": "Variable",
-    "defdec": "Def",
-    "display": "queue_head",
+    "defdec": "Dec",
+    "display": "length_queue",
     "location": {
       "column": "9",
       "line": "11",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
     },
-    "name": "queue_head",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@queue_tail",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "queue_tail",
-    "location": {
-      "column": "9",
-      "line": "12",
-      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
-    },
-    "name": "queue_tail",
+    "name": "length_queue",
     "origin": "project_file",
     "scope": null
   },
@@ -100397,7 +100439,7 @@
     "display": "add_restart",
     "location": {
       "column": "10",
-      "line": "13",
+      "line": "12",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
     },
     "name": "add_restart",
@@ -100411,10 +100453,66 @@
     "display": "msp_restart",
     "location": {
       "column": "10",
-      "line": "14",
+      "line": "13",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
     },
     "name": "msp_restart",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@queue_head",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "queue_head",
+    "location": {
+      "column": "9",
+      "line": "14",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
+    },
+    "name": "queue_head",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@queue_tail",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "queue_tail",
+    "location": {
+      "column": "9",
+      "line": "15",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
+    },
+    "name": "queue_tail",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@srec_length",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "srec_length",
+    "location": {
+      "column": "9",
+      "line": "16",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
+    },
+    "name": "srec_length",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:RingBuffer.c@push_line",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "push_line",
+    "location": {
+      "column": "16",
+      "line": "17",
+      "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
+    },
+    "name": "push_line",
     "origin": "project_file",
     "scope": null
   },
@@ -100425,7 +100523,7 @@
     "display": "uint8_t next_index(uint8_t)",
     "location": {
       "column": "19",
-      "line": "20",
+      "line": "23",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
     },
     "name": "next_index",
@@ -100439,7 +100537,7 @@
     "display": "void Push_Circular_Queue(uint8_t)",
     "location": {
       "column": "16",
-      "line": "33",
+      "line": "36",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
     },
     "name": "Push_Circular_Queue",
@@ -100447,16 +100545,16 @@
     "scope": null
   },
   {
-    "ID": "c:RingBuffer.c@828@F@Push_Circular_Queue@srec_length",
+    "ID": "c:RingBuffer.c@918@F@Push_Circular_Queue@count",
     "What": "Variable",
     "defdec": "Def",
-    "display": "srec_length",
+    "display": "count",
     "location": {
       "column": "18",
-      "line": "35",
+      "line": "38",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
     },
-    "name": "srec_length",
+    "name": "count",
     "origin": "project_file",
     "scope": null
   },
@@ -100467,7 +100565,7 @@
     "display": "void Handle_Queue_Overflow(void)",
     "location": {
       "column": "6",
-      "line": "59",
+      "line": "61",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
     },
     "name": "Handle_Queue_Overflow",
@@ -100481,7 +100579,7 @@
     "display": "void Pop_Circular_Queue(void)",
     "location": {
       "column": "6",
-      "line": "65",
+      "line": "68",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
     },
     "name": "Pop_Circular_Queue",
@@ -100489,13 +100587,13 @@
     "scope": null
   },
   {
-    "ID": "c:RingBuffer.c@1449@F@Pop_Circular_Queue@flash_address",
+    "ID": "c:RingBuffer.c@1516@F@Pop_Circular_Queue@flash_address",
     "What": "Variable",
     "defdec": "Def",
     "display": "flash_address",
     "location": {
       "column": "19",
-      "line": "67",
+      "line": "70",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
     },
     "name": "flash_address",
@@ -100503,13 +100601,13 @@
     "scope": null
   },
   {
-    "ID": "c:RingBuffer.c@1483@F@Pop_Circular_Queue@data_flash",
+    "ID": "c:RingBuffer.c@1550@F@Pop_Circular_Queue@data_flash",
     "What": "Variable",
     "defdec": "Def",
     "display": "data_flash",
     "location": {
       "column": "18",
-      "line": "68",
+      "line": "71",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
     },
     "name": "data_flash",
@@ -100517,13 +100615,13 @@
     "scope": null
   },
   {
-    "ID": "c:RingBuffer.c@1516@F@Pop_Circular_Queue@u8_i",
+    "ID": "c:RingBuffer.c@1583@F@Pop_Circular_Queue@u8_i",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8_i",
     "location": {
       "column": "12",
-      "line": "69",
+      "line": "72",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
     },
     "name": "u8_i",
@@ -100531,13 +100629,13 @@
     "scope": null
   },
   {
-    "ID": "c:RingBuffer.c@1534@F@Pop_Circular_Queue@th_byte_value",
+    "ID": "c:RingBuffer.c@1601@F@Pop_Circular_Queue@th_byte_value",
     "What": "Variable",
     "defdec": "Def",
     "display": "th_byte_value",
     "location": {
       "column": "12",
-      "line": "70",
+      "line": "73",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
     },
     "name": "th_byte_value",
@@ -100545,13 +100643,13 @@
     "scope": null
   },
   {
-    "ID": "c:RingBuffer.c@1565@F@Pop_Circular_Queue@srec_line",
+    "ID": "c:RingBuffer.c@1632@F@Pop_Circular_Queue@srec_line",
     "What": "Variable",
     "defdec": "Def",
     "display": "srec_line",
     "location": {
       "column": "12",
-      "line": "71",
+      "line": "74",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\RingBuffer.c"
     },
     "name": "srec_line",
@@ -111597,7 +111695,7 @@
     "display": "void false_setup_uart(void)",
     "location": {
       "column": "6",
-      "line": "88",
+      "line": "86",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\UART.c"
     },
     "name": "false_setup_uart",
@@ -111611,7 +111709,7 @@
     "display": "void UART0_setclk(CHOOSE_CLOCK_PERIPHERAL)",
     "location": {
       "column": "6",
-      "line": "93",
+      "line": "91",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\UART.c"
     },
     "name": "UART0_setclk",
@@ -111625,7 +111723,7 @@
     "display": "void uart0_transmission(CONTROL_S)",
     "location": {
       "column": "6",
-      "line": "99",
+      "line": "97",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\UART.c"
     },
     "name": "uart0_transmission",
@@ -111639,7 +111737,7 @@
     "display": "void uart0_receive(CONTROL_S)",
     "location": {
       "column": "6",
-      "line": "105",
+      "line": "103",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\UART.c"
     },
     "name": "uart0_receive",
@@ -111653,7 +111751,7 @@
     "display": "uint8_t Uart0_Receive_Data(void)",
     "location": {
       "column": "9",
-      "line": "111",
+      "line": "109",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\UART.c"
     },
     "name": "Uart0_Receive_Data",
@@ -111667,7 +111765,7 @@
     "display": "void Uart_String_Transmission(uint8_t *)",
     "location": {
       "column": "6",
-      "line": "120",
+      "line": "118",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\UART.c"
     },
     "name": "Uart_String_Transmission",
@@ -111681,7 +111779,7 @@
     "display": "void Uart_Put_Data(uint8_t)",
     "location": {
       "column": "6",
-      "line": "129",
+      "line": "127",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\UART.c"
     },
     "name": "Uart_Put_Data",
@@ -111695,7 +111793,7 @@
     "display": "void clear_Str(uint8_t *)",
     "location": {
       "column": "6",
-      "line": "135",
+      "line": "133",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\UART.c"
     },
     "name": "clear_Str",
@@ -111703,13 +111801,13 @@
     "scope": null
   },
   {
-    "ID": "c:UART.c@3273@F@clear_Str@i",
+    "ID": "c:UART.c@3269@F@clear_Str@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "12",
-      "line": "137",
+      "line": "135",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\UART.c"
     },
     "name": "i",
@@ -111723,7 +111821,7 @@
     "display": "void uart_init(void)",
     "location": {
       "column": "6",
-      "line": "146",
+      "line": "144",
       "path": "C:\\IAR Embedded Workbench\\LinhVT18_EMB_Assignment_16_new\\project\\UART.c"
     },
     "name": "uart_init",

@@ -22,6 +22,8 @@ void HardFault_Handler();
 
 uint32_t Vector_Table_To_RAM[VECTOR_TABLE_SIZE] __attribute__(( aligned (VECTOR_TABLE_ALIGNMENT) ));
 
+static uint8_t pop_line=0;
+
 void SetMSP(uint32_t value)
 {
    __asm("MSR MSP, R0");
@@ -33,6 +35,7 @@ void SetPC(uint32_t value)
 
 void main()
 {
+    
     Move_Vector_Table();
     initLed();
     init_clock();
@@ -48,6 +51,7 @@ void main()
         if(queue_head != queue_tail)
         {
             Pop_Circular_Queue();
+            pop_line++;
             if(queue_overflow_flag == TRUE)
             {
                 Handle_Queue_Overflow();

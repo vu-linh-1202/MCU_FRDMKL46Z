@@ -4,6 +4,7 @@
         "CLOCK.C": "cpp",
         "PIT.C": "cpp",
         "stdio.h": "c",
-        "srecord.h": "c"
+        "srecord.h": "c",
+        "stdlib.h": "c"
     }
 }
