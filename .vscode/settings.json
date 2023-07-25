@@ -5,6 +5,7 @@
         "PIT.C": "cpp",
         "stdio.h": "c",
         "srecord.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "string_handle_error.h": "c"
     }
 }

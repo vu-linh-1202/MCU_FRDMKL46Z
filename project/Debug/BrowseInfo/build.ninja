@@ -1,0 +1,153 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out
+
+rule MAKEBROWSE
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out
+
+rule PDBLINK
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out
+
+
+
+#Build steps
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\CLOCK.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\CLOCK.C" -xcl_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\CLOCK.xcl" -macro_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\CLOCK.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\CLOCK.C" -D CPU_MKL46Z256VLL4 -o "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\Obj\source" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M0+ -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\source\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\CMSIS\Include\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\MKL46Z\\" -Ol --predef_macros "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\CLOCK.tmp"
+  rspfile_name = C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\CLOCK.xcl.rsp
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\Flash.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Flash.c" -xcl_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\Flash.xcl" -macro_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\Flash.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Flash.c" -D CPU_MKL46Z256VLL4 -o "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\Obj\source" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M0+ -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\source\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\CMSIS\Include\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\MKL46Z\\" -Ol --predef_macros "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\Flash.tmp"
+  rspfile_name = C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\Flash.xcl.rsp
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\source\main.c" -xcl_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\main.xcl" -macro_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\main.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\source\main.c" -D CPU_MKL46Z256VLL4 -o "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\Obj\source" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M0+ -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\source\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\CMSIS\Include\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\MKL46Z\\" -Ol --predef_macros "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\main.tmp"
+  rspfile_name = C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\main.xcl.rsp
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\PIT.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\PIT.C" -xcl_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\PIT.xcl" -macro_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\PIT.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\PIT.C" -D CPU_MKL46Z256VLL4 -o "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\Obj\source" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M0+ -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\source\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\CMSIS\Include\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\MKL46Z\\" -Ol --predef_macros "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\PIT.tmp"
+  rspfile_name = C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\PIT.xcl.rsp
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\RingBuffer.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\RingBuffer.c" -xcl_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\RingBuffer.xcl" -macro_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\RingBuffer.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\RingBuffer.c" -D CPU_MKL46Z256VLL4 -o "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\Obj\source" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M0+ -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\source\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\CMSIS\Include\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\MKL46Z\\" -Ol --predef_macros "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\RingBuffer.tmp"
+  rspfile_name = C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\RingBuffer.xcl.rsp
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\String_Handle_Error.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\String_Handle_Error.c" -xcl_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\String_Handle_Error.xcl" -macro_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\String_Handle_Error.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\String_Handle_Error.c" -D CPU_MKL46Z256VLL4 -o "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\Obj\source" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M0+ -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\source\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\CMSIS\Include\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\MKL46Z\\" -Ol --predef_macros "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\String_Handle_Error.tmp"
+  rspfile_name = C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\String_Handle_Error.xcl.rsp
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\system_MKL46Z4.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\MKL46Z\system_MKL46Z4.c" -xcl_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\system_MKL46Z4.xcl" -macro_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\system_MKL46Z4.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\MKL46Z\system_MKL46Z4.c" -D CPU_MKL46Z256VLL4 -o "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\Obj\source" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M0+ -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\source\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\CMSIS\Include\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\MKL46Z\\" -Ol --predef_macros "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\system_MKL46Z4.tmp"
+  rspfile_name = C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\system_MKL46Z4.xcl.rsp
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\TPM.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\TPM.c" -xcl_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\TPM.xcl" -macro_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\TPM.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\TPM.c" -D CPU_MKL46Z256VLL4 -o "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\Obj\source" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M0+ -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\source\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\CMSIS\Include\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\MKL46Z\\" -Ol --predef_macros "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\TPM.tmp"
+  rspfile_name = C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\TPM.xcl.rsp
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Peripheral.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Peripheral.c" -xcl_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Peripheral.xcl" -macro_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Peripheral.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Peripheral.c" -D CPU_MKL46Z256VLL4 -o "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M0+ -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\source\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\CMSIS\Include\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\MKL46Z\\" -Ol --predef_macros "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Peripheral.tmp"
+  rspfile_name = C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Peripheral.xcl.rsp
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Srecord.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Srecord.c" -xcl_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Srecord.xcl" -macro_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Srecord.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Srecord.c" -D CPU_MKL46Z256VLL4 -o "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M0+ -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\source\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\CMSIS\Include\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\MKL46Z\\" -Ol --predef_macros "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Srecord.tmp"
+  rspfile_name = C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Srecord.xcl.rsp
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\UART.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\UART.c" -xcl_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\UART.xcl" -macro_file "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\UART.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\UART.c" -D CPU_MKL46Z256VLL4 -o "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M0+ -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\source\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\CMSIS\Include\\" -I "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\..\MKL46Z\\" -Ol --predef_macros "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\UART.tmp"
+  rspfile_name = C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\UART.xcl.rsp
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\CLOCK.pbi : INDEXER C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\CLOCK.xcl |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\CLOCK.C
+  flags = "-out=C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\CLOCK.pbi" -f "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\CLOCK.xcl"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\Flash.pbi : INDEXER C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\Flash.xcl |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Flash.c
+  flags = "-out=C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\Flash.pbi" -f "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\Flash.xcl"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\main.pbi : INDEXER C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\main.xcl |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\source\main.c
+  flags = "-out=C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\main.pbi" -f "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\main.xcl"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\PIT.pbi : INDEXER C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\PIT.xcl |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\PIT.C
+  flags = "-out=C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\PIT.pbi" -f "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\PIT.xcl"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\RingBuffer.pbi : INDEXER C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\RingBuffer.xcl |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\RingBuffer.c
+  flags = "-out=C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\RingBuffer.pbi" -f "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\RingBuffer.xcl"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\String_Handle_Error.pbi : INDEXER C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\String_Handle_Error.xcl |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\String_Handle_Error.c
+  flags = "-out=C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\String_Handle_Error.pbi" -f "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\String_Handle_Error.xcl"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\system_MKL46Z4.pbi : INDEXER C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\system_MKL46Z4.xcl |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\MKL46Z\system_MKL46Z4.c
+  flags = "-out=C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\system_MKL46Z4.pbi" -f "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\system_MKL46Z4.xcl"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\TPM.pbi : INDEXER C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\TPM.xcl |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\TPM.c
+  flags = "-out=C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\TPM.pbi" -f "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\TPM.xcl"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Peripheral.pbi : INDEXER C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Peripheral.xcl |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Peripheral.c
+  flags = "-out=C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Peripheral.pbi" -f "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Peripheral.xcl"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Srecord.pbi : INDEXER C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Srecord.xcl |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Srecord.c
+  flags = "-out=C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Srecord.pbi" -f "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Srecord.xcl"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\UART.pbi : INDEXER C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\UART.xcl |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\UART.c
+  flags = "-out=C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\UART.pbi" -f "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\UART.xcl"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking.pbw : MAKEBROWSE C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking.pbd
+  flags = "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking.pbd" -output "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking.pbw"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part0.pbi : PDBLINK C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\CLOCK.pbi |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\Flash.pbi $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\main.pbi
+  flags = -M "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part0.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\CLOCK.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\Flash.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\main.pbi"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part1.pbi : PDBLINK C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\PIT.pbi |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\RingBuffer.pbi $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\String_Handle_Error.pbi
+  flags = -M "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part1.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\PIT.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\RingBuffer.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\String_Handle_Error.pbi"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part2.pbi : PDBLINK C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\system_MKL46Z4.pbi |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\TPM.pbi $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Peripheral.pbi
+  flags = -M "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part2.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\system_MKL46Z4.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\source\TPM.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Peripheral.pbi"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part3.pbi : PDBLINK C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Srecord.pbi |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\UART.pbi
+  flags = -M "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part3.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\Srecord.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\UART.pbi"
+
+build C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking.pbd : PDBLINK C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part0.pbi |  $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part1.pbi $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part2.pbi $
+C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part3.pbi
+  flags = -M "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking.pbd" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part0.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part1.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part2.pbi" "C$:\IAR$ Embedded$ Workbench\LinhVT18_EMB_Assignment_16_new\project\Debug\BrowseInfo\LedBlinking_part3.pbi"
+

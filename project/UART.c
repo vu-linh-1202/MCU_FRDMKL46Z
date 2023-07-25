@@ -1,9 +1,9 @@
 #include "UART.h"
 
+
 uint8_t g_str[buffer_max];
 uint8_t number_of_elements=0;
 
-void false_setup_uart();
 void uart0_control(CONTROL_S control)
 {
   SIM->SCGC4 &= SIM_SCGC4_UART0_MASK;
@@ -78,13 +78,14 @@ void uart0_set_baurate(int32_t int32_baurate, int32_t int32_frequency)
   }
   else
   {
-    false_setup_uart();
+    false_setup_baudrate();
   }
    
 }
 
-void false_setup_uart()
+void false_setup_baudrate()
 {
+  False_Setup_Uart();
   while(1);
 }
 
@@ -144,7 +145,7 @@ void clear_Str(uint8_t *str1)
 void uart_init()
 {
   uart0_control(ENABLE);
-  uart0_set_baurate(921600,48000000);
+  uart0_set_baurate(BAUDRATE_921600,FREQUENCY_CLOCK);
   UART0->C2 |= UART_C2_RIE_MASK;/* enable rie interurrupt*/
   UART0_setclk(MCG_PLL_FLLCLK);
   uart0_transmission(ENABLE);

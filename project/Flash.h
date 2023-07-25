@@ -10,5 +10,6 @@
 
 void Flash_Write(uint32_t add, uint32_t data);
 void Flash_Erase(uint32_t Address);
+void Flash_Read(uint32_t address, uint8_t* data);
 
 #endif /* _FLASH_H_ */

@@ -56,3 +56,30 @@ void Flash_Erase(uint32_t Address)
     FTFA->FSTAT = START_COMMAND;
     while ((FTFA->FSTAT & FTFA_FSTAT_CCIF_MASK) == 0);
 }
+
+/*
+void Flash_Read(uint32_t address, uint8_t* data)
+{
+    uint32_t* flash_address = (uint32_t*)address;
+    uint32_t data_flash = *flash_address;
+    data[0] = (data_flash & 0XFF);
+    data[1] = ((data_flash >> 8) & 0xFF);
+    data[2] = ((data_flash >> 16) & 0xFF);
+    data[3] = ((data_flash >> 24) & 0xFF);
+}
+
+void Flash_Copy(uint32_t dest_addr, uint32_t src_addr, uint32_t size)
+{
+    uint32_t i;
+
+    // Erase the destination area
+    Flash_Erase(dest_addr);
+
+    // Copy the data from source to destination
+    for (i = 0; i < size; i += 4)
+    {
+        uint32_t data = Flash_Read(src_addr + i);
+        Flash_Write(dest_addr + i, data);
+    }
+}
+*/
